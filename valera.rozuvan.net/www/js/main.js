@@ -15,7 +15,8 @@
             fitvids: 'vendor/jquery.fitvids',
             isotope: 'vendor/jquery.isotope.min',
             tinynav: 'vendor/tinynav.min',
-            theme: 'theme'
+            theme: 'theme',
+            get_tweets: 'get_tweets'
         },
         shim: {
             superfish: {
@@ -45,14 +46,13 @@
         }
     });
 
-    require(['jquery', 'superfish', 'theme'], function ($, Superfish, Theme) {
-        Theme.initialize();
+    require(['jquery', 'superfish', 'theme', 'get_tweets'], function ($, Superfish, Theme, GetTweets) {
         $(document).ready(onReady);
 
         return;
 
         function onReady() {
-            console.log('document ready');
+            Theme.initialize();
 
             $('ul.sf-menu').supersubs({
                 minWidth: 8, // minimum width of sub-menus in em units
@@ -69,6 +69,8 @@
                 autoArrows: true,
                 dropShadows: true
             });
+
+            GetTweets.get();
         }
     });
 }).call(this);

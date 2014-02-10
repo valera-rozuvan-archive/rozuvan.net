@@ -18,10 +18,6 @@
         // Initialize Page
         ///////////////////////////////
         function initialize() {
-            $(document).ready(onReady);
-        }
-
-        function onReady() {
             gridContainer = $('.thumbs.masonry');
 
             projectThumbInit();
