@@ -16,7 +16,8 @@
             isotope: 'vendor/jquery.isotope.min',
             tinynav: 'vendor/tinynav.min',
             theme: 'theme',
-            get_tweets: 'get_tweets'
+            get_tweets: 'get_tweets',
+            google_analytics: 'google_analytics'
         },
         shim: {
             superfish: {
@@ -46,7 +47,10 @@
         }
     });
 
-    require(['jquery', 'superfish', 'theme', 'get_tweets'], function ($, Superfish, Theme, GetTweets) {
+    require(
+        ['jquery', 'superfish', 'theme', 'get_tweets', 'google_analytics'],
+        function ($, Superfish, Theme, GetTweets, GoogleAnalytics)
+    {
         $(document).ready(onReady);
 
         return;
@@ -71,6 +75,8 @@
             });
 
             GetTweets.get();
+
+            GoogleAnalytics.initialize();
         }
     });
 }).call(this);
