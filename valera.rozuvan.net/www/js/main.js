@@ -7,6 +7,15 @@
  */
 
 (function (undefined) {
+    // Mock the `console.log()` method so that browsers that don't have this
+    // debugging facility don't break.
+    if (!window.console) {
+        window.console = {};
+    }
+    if (!window.console.log) {
+        window.console.log = function consoleLog() {};
+    }
+
     require.config({
         baseUrl: 'js',
         paths: {
