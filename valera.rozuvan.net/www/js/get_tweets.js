@@ -27,7 +27,6 @@
                 return;
             }
 
-            console.log('feed = ', feed);
             renderFeed(feed);
         }
 
