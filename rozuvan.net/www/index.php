@@ -57,6 +57,6 @@
     <body>
         Please visit the subdomain <span class="valera-subdomain">valera.rozuvan.net</span> at <a href="http://valera.rozuvan.net/" title="Valera Rozuvan">Valera Rozuvan</a>.
         <br />
-        <div class="header">© 2013-2015 rozuvan.net</div>
+        <div class="header">&copy; 2013-2015 rozuvan.net</div>
     </body>
 </html>
